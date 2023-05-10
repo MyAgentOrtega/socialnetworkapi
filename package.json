@@ -12,6 +12,7 @@
     "url": "git+https://github.com/MyAgentOrtega/socialnetworkapi.git"
   },
   "dependencies": {
+    "dayjs": "^1.11.7",
     "express": "^4.17.1",
     "mongoose": "^7.0.2"
   },
