@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 const reactionsSchema = require("./Reactions");
-const dayjs = require("dayjs");
+// const dayjs = require("dayjs");
 const thoughtsSchemas = new Schema(
   {
     thoughtText: {
@@ -13,7 +13,8 @@ const thoughtsSchemas = new Schema(
       type: Date,
       default: Date.now(),
       get: (timestamp) =>
-        dayjs().unix(timestamp).tz("UTC").format("YYYY-MM-DDTHH:mm:ss"),
+      new Date(timestamp).toLocaleDateString()
+        // dayjs().unix(timestamp).tz("UTC").format("YYYY-MM-DDTHH:mm:ss"),
     },
     username: {
       type: String,

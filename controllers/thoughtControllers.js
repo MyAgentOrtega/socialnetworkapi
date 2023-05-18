@@ -39,7 +39,7 @@ module.exports = {
         res.status(404).json(err);
         ({ message: "No Thought Found" });
       }
-       const user = await User.findOneAndUpdate(
+      const user = await User.findOneAndUpdate(
         { thoughts: req.params.thoughtsId },
         { $pull: { thoughts: req.params.thoughtsId } }
       );
@@ -57,9 +57,12 @@ module.exports = {
       const thought = await Thought.create(req.body);
       const user = await User.findOneAndUpdate(
         { _id: req.body.userId },
-        { $push: { thoughts: thought._id } })
+        { $push: { thoughts: thought._id } }
+      );
       res.json(thought);
     } catch (err) {
+        console.log(err);
       res.status(500).json(err);
     }
+  },
 };
