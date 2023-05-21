@@ -36,7 +36,16 @@ router
   })
   .delete(async function (req, res) {
     try {
-    } catch (error) {}
+      // find the thought, find the reaction, remove it from the reactions arr on the specific thought
+      const thought = await Thought.findOneAndUpdate(
+        { _id: req.params.thoughtsId },
+        { $pull: { reactions: {_id: req.body.reactionId} } }
+      );
+
+      res.status(200).json(thought);
+    } catch (err) {
+      res.status(500).json(err);
+    }
   });
 
 module.exports = router;
