@@ -12,9 +12,8 @@ const thoughtsSchemas = new Schema(
     createdAt: {
       type: Date,
       default: Date.now(),
-      get: (timestamp) =>
-      new Date(timestamp).toLocaleDateString()
-        // dayjs().unix(timestamp).tz("UTC").format("YYYY-MM-DDTHH:mm:ss"),
+      get: (timestamp) => new Date(timestamp).toLocaleDateString(),
+      // dayjs().unix(timestamp).tz("UTC").format("YYYY-MM-DDTHH:mm:ss"),
     },
     username: {
       type: String,
