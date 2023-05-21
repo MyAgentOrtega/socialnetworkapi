@@ -5,14 +5,17 @@ module.exports = {
       const thought = await Thought.find();
       res.json(thought);
     } catch (err) {
-      res.status(404).json(err);
+      res.status(500).json(err);
     }
   },
   async getSingleThought(req, res) {
     try {
       const thought = await Thought.findOne({ _id: req.params.thoughtsId });
+
+      res.status(200).json(thought);
     } catch (err) {
-      res.status(404).json(err);
+      console.error(err);
+      res.status(500).json(err);
     }
   },
   async updateThought(req, res) {
@@ -61,7 +64,7 @@ module.exports = {
       );
       res.json(thought);
     } catch (err) {
-        console.log(err);
+      console.log(err);
       res.status(500).json(err);
     }
   },
