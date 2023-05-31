@@ -7,15 +7,15 @@ This application functions as a social network web application where users can s
 - Version 1
 
 ### <u> Screenshot: </u>
-![Social Network API: Screenshot](.//images/ss%201.jpg)
-![Social Network API: Screenshot](.//images/ss%202.jpg)
-![Social Network API: Screenshot](.//images/ss3.jpg)
-![Social Network API: Screenshot](.//images/ss4.jpg)
-![Social Network API: Screenshot](.//images/ss5.jpg)
+![Social Network API: Get All Screenshot](.//images/ss%201.jpg)
+![Social Network API: Create Screenshot](.//images/ss%202.jpg)
+![Social Network API: Get Single Screenshot](.//images/ss3.jpg)
+![Social Network API: Update user Screenshot](.//images/ss4.jpg)
+![Social Network API: Delete User Screenshot](.//images/ss5.jpg)
 
-### <u> Deployable Link: </u>
+### <u> Video Link: </u>
 
-https://joeytechblogapp.herokuapp.com/
+https://drive.google.com/file/d/1O0qbK4PyRgwPbsxTlfb0EZQ9XkY1Fy_i/view
 
 ### <u> Support:  </u>
 
